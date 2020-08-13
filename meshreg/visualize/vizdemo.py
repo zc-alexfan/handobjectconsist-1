@@ -12,7 +12,7 @@ def draw_contours(img, mask, color=(0, 255, 255)):
         color: color of contours to draw
     """
     contours = cv2.findContours((mask > 0).astype("uint8"), cv2.RETR_CCOMP, cv2.CHAIN_APPROX_NONE)
-    res_img = cv2.drawContours(img.copy(), contours[0], -1, color, 3)
+    res_img = cv2.drawContours(img.copy(), contours[1], -1, color, 3)
     return res_img
 
 
